@@ -1,5 +1,12 @@
-$grayish: #4d4d4d;
-$bacground: rgb(255, 255, 255);
+[data-theme='light'] {
+    --grayish: #444040;
+    --background: rgb(255, 255, 255);
+}
+
+[data-theme='dark'] {
+    --grayish: rgb(255, 255, 255);
+    --background: #18161d;
+}
 
 .wrg-toggle--checked .wrg-toggle-check{
     opacity: 1;
@@ -10,6 +17,10 @@ $bacground: rgb(255, 255, 255);
 .wrg-toggle--checked .wrg-toggle-circle {
     left: 27px;
 }
+.wrg-toggle--checked .wrg-toggle-container{
+    background-color: var(--grayish)
+}
+
 
 
 body {
@@ -20,8 +31,6 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    background-color: $bacground;
 }
 
 code {
@@ -30,7 +39,8 @@ code {
 }
 
 .container {
-    color: $grayish;
+    background-color: var(--background);
+    color: var(--grayish);
     font-family: Roboto;
     display: block;
     text-align: center;
@@ -69,9 +79,9 @@ code {
     }
 
     div:hover {
-        background-color: $grayish;
-        color: white;
-        border: 2px solid $grayish;
+        background-color: var(--grayish);
+        color: var(--background);
+        border: 2px solid var(--grayish);
     }
     
 }

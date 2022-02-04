@@ -2,12 +2,23 @@ import { useState } from 'react';
 import './toggle-button.css'
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { BsMoonStars } from 'react-icons/bs'
+
+
 
 export default function ToggleButton(props) {
 
+    const currentTheme = () => {
+        console.log(props)
+        if(props.currentTheme == 'light') {
+            return false
+            
+        }
+        return true
+    }
     const { disabled, className } = props;
 
-    const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(currentTheme());
 
     const triggerToggle = () => {
 
@@ -15,16 +26,18 @@ export default function ToggleButton(props) {
         setToggle( !toggle )
     }
 
+
     const toggleClasses = classNames('wrg-toggle', {
         'wrg-toggle--checked': toggle,
         'wrg-toggle--disabled': disabled
     }, className);
+    
 
     return (
         <div onClick={triggerToggle} className={toggleClasses}>
             <div className="wrg-toggle-container">
                 <div className="wrg-toggle-check">
-                    <span>🌜</span>
+                    <span><BsMoonStars className='moon'/></span>
                 </div>
                 <div className="wrg-toggle-uncheck">
                     <span>🌞</span>

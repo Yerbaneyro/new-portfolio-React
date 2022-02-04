@@ -5,6 +5,7 @@ import { FaHtml5, FaCss3, FaReact, FaSass, FaLinux, FaNodeJs, FaPython, FaGithub
 import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si'
 import { FiMail } from 'react-icons/fi'
 import ToggleButton from './components/toggle-button'
+import useLocalStorage from 'use-local-storage'
 
 
 function IconsSlider() {
@@ -59,6 +60,16 @@ function Navigation() {
 
 function App() {
 
+  //Checking if user set a theme preference in their browser.
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+  const switchTheme = () => {
+    const newTheme = theme ==='light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  }
+
   const props = useSpring({
     to: {opacity: 1, scale: 1.3},
     from: { opacity: 0, scale: 1},
@@ -67,9 +78,9 @@ function App() {
   );
   
   return (
-    <div className="container">
+    <div className="container" data-theme={theme}>
       <ContactButtons />
-      <ToggleButton />
+      <a onClick={switchTheme} ><ToggleButton currentTheme={theme}/></a>
       <Navigation /> 
       <div className='center'>
             <animated.h1 style={props} className={'myName'}>Marcin Bednarz</animated.h1>
