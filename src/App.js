@@ -12,28 +12,18 @@ import laptop from './img/laptop.png';
 import { useState } from 'react';
 
 import Navigation from './components/navigation';
+import ContactButtons from './components/contact-buttons';
 import IconsSlider from './components/icon-slider';
 import PortfolioMenu from './components/portfolio-menu';
 import { AboutMe, AboutSkills } from './components/about-me';
+import Vegan from './components/portfolio/vegan';
+import ThisSite from './components/portfolio/this-site';
+import Json from './components/portfolio/json';
+import MadMai from './components/portfolio/madmai';
+import Native from './components/portfolio/native';
+import Weather from './components/portfolio/weather';
 
 import AnimatedTypingHome from './components/typing-home'
-
-function ContactButtons() {
-  return(
-    <div className='social-buttons'>
-      <div>
-        <FaGithub />
-        <FaLinkedin />
-      </div>
-      <div>
-        <FiMail />
-        <p className='cv'>CV</p>
-      </div>  
-    </div>
-  )
-}
-
-
 
 
 function App() {
@@ -58,7 +48,6 @@ function App() {
 
   const [currentScreen, setcurrentScreen] = useState('Home');
 
-    console.log(currentScreen)
 
   if (currentScreen == 'Home') {
 
@@ -90,7 +79,7 @@ function App() {
           <a onClick={switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={theme}/></a>
           <Navigation setcurrentScreen={setcurrentScreen}/> 
           <div className='center-screen'>
-            <PortfolioMenu />
+            <PortfolioMenu setcurrentScreen={setcurrentScreen} currentScreen={currentScreen}/>
             <img src={laptop} alt='laptop' className='laptop'/>
           </div>
           <div className='center'>
@@ -99,6 +88,47 @@ function App() {
           </div> 
         </div>
       </body>
+    )
+  }
+
+  if (currentScreen == 'This-site') {
+
+    return(
+      <ThisSite theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen} currentScreen={currentScreen}/>
+    )
+  }
+  if (currentScreen == 'JSON') {
+
+    return(
+      <Json theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen} currentScreen={currentScreen}/>
+    )
+  }
+
+  if (currentScreen == 'Vegan') {
+
+    return(
+      <Vegan theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
+    )
+  }
+
+  if (currentScreen == 'Native') {
+
+    return(
+      <Native theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
+    )
+  }
+
+  if (currentScreen == 'MadMai') {
+
+    return(
+      <MadMai theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
+    )
+  }
+
+  if (currentScreen == 'Weather') {
+
+    return(
+      <Weather theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
     )
   }
 
