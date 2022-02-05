@@ -221,3 +221,67 @@ code {
     bottom: 20px;
 }
 
+.about-icon {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+
+}
+
+.about-me-text {
+    text-align: left;
+    font-size: 16px;
+    width: 300px;
+    position: relative;
+    left: 980px;
+    background-color: #18161d0c;
+    border-radius: 24px;
+    padding: 15px;
+}
+
+.about-me-tools {
+    text-align: left;
+    font-size: 16px;
+    width: 300px;
+    max-height: 400px;
+    position: relative;
+    left: 220px;
+    border-radius: 24px;
+    padding: 15px;
+}
+
+.profile {
+    text-align: left;
+}
+
+.skils-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    * {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+}
+
+.my-toolbelt {
+    text-align: center;
+    font-weight: bold;
+}
+
+.experience {
+    text-align: center;
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+}

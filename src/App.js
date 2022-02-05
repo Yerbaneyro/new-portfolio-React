@@ -1,14 +1,21 @@
 import './App.scss';
 import { useSpring, animated } from 'react-spring';
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaUserAlt } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi';
+
+
 import ToggleButton from './components/toggle-button';
 import useLocalStorage from 'use-local-storage';
+
 import laptop from './img/laptop.png';
+
 import { useState } from 'react';
+
 import Navigation from './components/navigation';
 import IconsSlider from './components/icon-slider';
 import PortfolioMenu from './components/portfolio-menu';
+import { AboutMe, AboutSkills } from './components/about-me';
+
 import AnimatedTypingHome from './components/typing-home'
 
 function ContactButtons() {
@@ -87,7 +94,7 @@ function App() {
             <img src={laptop} alt='laptop' className='laptop'/>
           </div>
           <div className='center'>
-            <animated.h1 style={myName} className={'portfolio-title'}>Portfolio</animated.h1>
+            <h1 className={'portfolio-title'}>Portfolio</h1>
             <h2>Chose project from menu on the left.</h2>
           </div> 
         </div>
@@ -101,9 +108,14 @@ function App() {
       <ContactButtons />
       <a onClick={switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={theme}/></a>
       <Navigation setcurrentScreen={setcurrentScreen}/> 
-      <img src={laptop} alt='laptop' className='laptop'/>
+      <div className='center-screen'>
+        <AboutSkills />
+        <FaUserAlt className='about-icon'/>
+        <img src={laptop} alt='laptop' className='laptop'/>
+        <AboutMe />
+      </div>
       <div className='center'>
-          <animated.h1 style={myName} className={'myName'}>About</animated.h1>
+        
       </div> 
       
       
