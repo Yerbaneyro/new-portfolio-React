@@ -1,29 +1,15 @@
 import './App.scss';
-import { BiHomeAlt, BiCube, BiUserCircle,  } from 'react-icons/bi';
 import { useSpring, animated } from 'react-spring';
-import { FaHtml5, FaCss3, FaReact, FaSass, FaLinux, FaNodeJs, FaPython, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si'
-import { FiMail } from 'react-icons/fi'
-import ToggleButton from './components/toggle-button'
-import useLocalStorage from 'use-local-storage'
-
-
-function IconsSlider() {
-  return (
-    <div className='icon-container'>
-      <FaHtml5 />
-      <FaCss3 />
-      <SiJavascript /> 
-      <SiTypescript /> 
-      <FaSass />
-      <FaReact />
-      <FaNodeJs />
-      <FaPython />
-      <SiGit />
-      <FaLinux />
-    </div>
-  )
-}
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi';
+import ToggleButton from './components/toggle-button';
+import useLocalStorage from 'use-local-storage';
+import laptop from './img/laptop.png';
+import { useState } from 'react';
+import Navigation from './components/navigation';
+import IconsSlider from './components/icon-slider';
+import PortfolioMenu from './components/portfolio-menu';
+import AnimatedTypingHome from './components/typing-home'
 
 function ContactButtons() {
   return(
@@ -40,22 +26,7 @@ function ContactButtons() {
   )
 }
 
-function Navigation() {
-  
-  return (
-    <div className='nav-bar'>
-      <div>
-        <p className='home'><BiHomeAlt className='icon'/>Home</p>
-      </div>
-      <div>
-      <p className='portfolio'><BiCube className='icon'/>Projects</p>      
-      </div>
-      <div>
-        <p className='about-me'><BiUserCircle className='icon'/>About Me.</p>
-      </div>
-    </div>
-  )
-}
+
 
 
 function App() {
@@ -70,25 +41,75 @@ function App() {
     setTheme(newTheme);
   }
 
-  const props = useSpring({
-    to: {opacity: 1, scale: 1.3},
-    from: { opacity: 0, scale: 1},
-    config: { friction: 70 },
+  const myName = useSpring({
+    from: { opacity: 0},
+    to: {opacity: 1},
+    delay: 8000,
+    config: { duration: "2000", },
     }
   );
-  
+
+  const [currentScreen, setcurrentScreen] = useState('Home');
+
+    console.log(currentScreen)
+
+  if (currentScreen == 'Home') {
+
+    return(
+      <body data-theme={theme}>
+        <div className="container" data-theme={theme}>
+          <ContactButtons />
+          <a onClick={switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={theme}/></a>
+          <Navigation setcurrentScreen={setcurrentScreen}/> 
+          <img src={laptop} alt='laptop' className='laptop'/>
+          <div className='center'>
+            <AnimatedTypingHome />
+            <animated.div style={myName}>
+              <IconsSlider />
+            </animated.div>  
+          </div> 
+        </div>
+      </body>
+    )
+  }
+
+  if (currentScreen == 'Portfolio') {
+
+    return(
+      <body data-theme={theme}>
+        
+        <div className="container" data-theme={theme}>
+          <ContactButtons />
+          <a onClick={switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={theme}/></a>
+          <Navigation setcurrentScreen={setcurrentScreen}/> 
+          <div className='center-screen'>
+            <PortfolioMenu />
+            <img src={laptop} alt='laptop' className='laptop'/>
+          </div>
+          <div className='center'>
+            <animated.h1 style={myName} className={'portfolio-title'}>Portfolio</animated.h1>
+            <h2>Chose project from menu on the left.</h2>
+          </div> 
+        </div>
+      </body>
+    )
+  }
+
   return (
+    <body data-theme={theme}>
     <div className="container" data-theme={theme}>
       <ContactButtons />
-      <a onClick={switchTheme} ><ToggleButton currentTheme={theme}/></a>
-      <Navigation /> 
+      <a onClick={switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={theme}/></a>
+      <Navigation setcurrentScreen={setcurrentScreen}/> 
+      <img src={laptop} alt='laptop' className='laptop'/>
       <div className='center'>
-            <animated.h1 style={props} className={'myName'}>Marcin Bednarz</animated.h1>
-            <h2>Web Developer</h2>
+          <animated.h1 style={myName} className={'myName'}>About</animated.h1>
       </div> 
-      <IconsSlider />
+      
+      
       
     </div>
+    </body>
   );
 }
 
