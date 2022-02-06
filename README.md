@@ -9,5 +9,3 @@ New portfolio based on React with some animations, new minimalistic style and da
 
 ### Some usefull packages:
 - React Spring 
-- React Icons
-
