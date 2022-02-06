@@ -1,0 +1,22 @@
+.this-center {
+    border-radius: 1px;
+    width: 540px;
+    height: 320px;
+    position: fixed;
+    left: 50%;
+    top: 220px;
+    transform: translateX(-50%);
+}
+
+.this-site-title {
+    font-size: 40px;
+}
+
+.technologies {
+    display: flex;
+    
+}
+
+.technology-icons {
+
+}

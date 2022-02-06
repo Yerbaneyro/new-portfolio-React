@@ -3,25 +3,49 @@ import ToggleButton from '../toggle-button';
 import Navigation from '../navigation';
 import PortfolioMenu from '../portfolio-menu';
 
-import laptop from '../../img/laptop.png'
+import { FaHtml5, FaExternalLinkAlt, FaReact, FaSass, FaLinux, FaNodeJs, FaPython, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si'
+
+import laptop from '../../img/laptop.png';
+import madmaiThumbal from '../../img/madmai.png';
 
 export default function MadMai(props) {
 
 return(
-        <body data-theme={props.theme}>
-            <div className="container" data-theme={props.theme}>
-                <ContactButtons />
-                <a onClick={props.switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={props.theme}/></a>
-                <Navigation setcurrentScreen={props.setcurrentScreen}/> 
-                <div className='center-screen'>
-                <PortfolioMenu setcurrentScreen={props.setcurrentScreen} currentScreen={props.currentScreen} />
-                <img src={laptop} alt='laptop' className='laptop'/>
+    <body data-theme={props.theme}>
+    <div className="container" data-theme={props.theme}>
+        <ContactButtons />
+        <a onClick={props.switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={props.theme}/></a>
+        <Navigation setcurrentScreen={props.setcurrentScreen}/> 
+        <div className='center-screen'>
+            <PortfolioMenu setcurrentScreen={props.setcurrentScreen} currentScreen={props.currentScreen} />
+            <img src={laptop} alt='laptop' className='laptop'/>
+        </div>
+        <div className='this-center'>
+            <img src={madmaiThumbal} alt='portfolio-screenshot'  className='screenshot' />
+            <h2 className={'mad-mai-title'}>Mad Mai - Landing Page</h2>
+            <a className={'mad-mai-link'}>www.madmai.pl</a>
+            <p className='description'>Landing Page with some simple JavaScript elements for smooth scrolling when using navigation. Simple bussines design. I was creating this page with direct cooperation with the client. He was happy with the effect. Unfortunately, he is not turning on SSL. But the Site is live and the client already has received a few business contacts from here. Created in Oct 2021.   </p>
+            <div className='technologies'>
+                <p>Technology:</p>
+                <div className='technology-icons'>
+                    <FaHtml5 />
+                    <FaSass />
+                    <SiJavascript />
                 </div>
-                <div className='center'>
-                <h1 className={'portfolio-title'}>Mad Mai</h1>
-                <h2>Chose project from menu on the left.</h2>
-                </div> 
             </div>
-        </body>
+            <div className='links'>
+                <p>See on:</p>
+                <div className='links-icons'>
+                    <FaGithub />
+                    <div className='live-link-container'>
+                        <p id='live'>Live</p>
+                        <p id='live-link'>Site</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
     )
 }

@@ -285,3 +285,146 @@ code {
     position: relative;
     bottom: 30px;
 }
+
+.this-center {
+    border-radius: 1px;
+    width: 540px;
+    height: 320px;
+    position: fixed;
+    left: 50%;
+    top: 220px;
+    transform: translateX(-50%);
+}
+
+.this-site-title {
+    font-size: 30px;
+    position: absolute;
+    top: 120px;
+    left: 30px;
+}
+
+.this-page-link {
+    position: absolute;
+    top: 236px;
+    left: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(21, 133, 67);    
+}
+
+.technologies {
+    display: flex;
+    justify-content: left;
+    border-radius: 24px;
+    width: 330px;
+    position: absolute;
+    top: 285px;
+    right: 230px;
+    
+    p {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+}
+
+.technology-icons {
+
+    display: flex;
+
+    * {
+        width: 30px;
+        height: 30px;
+        margin: 18px 10px;
+    }
+
+}
+
+.links {
+    position: absolute;
+    top: 285px;
+    display: flex;
+    justify-content: right;
+    border-radius: 24px;
+    width: 550px;
+    
+    p {
+        font-size: 20px;
+    }
+}
+
+#live {
+    position: relative;
+    right: 20px;
+    font-size: 19px;
+    padding: 2px;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.651);
+    border-radius: 50%;
+}
+
+.live-link-container {
+    position: relative;
+    bottom: 15px;
+}
+
+#live-link {
+    position: relative;
+    bottom: 35px;
+    right: 10px;
+}
+
+.links-icons {
+
+    display: flex;
+
+    * {
+        width: 40px;
+        height: 40px;
+        margin: 12px 10px;
+    }
+}
+
+.screenshot {
+    border: 2px solid var(--grayish);
+    border-radius: 5px;
+    width: 280px;
+    position: absolute;
+    right: 260px;
+    box-shadow: 0 0 10px var(--grayish)
+}
+
+.description {
+    text-align:justify;
+    border-radius: 13   px;
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    left: 320px;
+    top: -25px;
+    background-color: #18161d0c;
+    color: var(--grayish);
+    font-weight: bold;
+    padding: 13px;
+}
+
+.vegan-title {
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+
+.mad-mai-title {
+    font-size: 26px;
+    position: absolute;
+    top: 160px;
+}
+
+.mad-mai-link {
+    position: absolute;
+    top: 236px;
+    left: 65px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(21, 133, 67);    
+}
