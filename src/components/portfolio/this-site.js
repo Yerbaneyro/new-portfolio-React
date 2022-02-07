@@ -2,15 +2,15 @@ import ContactButtons from '../contact-buttons';
 import ToggleButton from '../toggle-button';
 import Navigation from '../navigation';
 import PortfolioMenu from '../portfolio-menu';
+import Mobile from '../mobile'
 
 import laptop from '../../img/laptop.png';
 import PortfolioThumbal from '../../img/portfolio-thumbal.png';
 
 import './this-site.css';
 
-import { FaHtml5, FaExternalLinkAlt, FaReact, FaSass, FaLinux, FaNodeJs, FaPython, FaGithub, FaLinkedin } from 'react-icons/fa'
+import {  FaReact, FaSass, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si'
-import { BiLinkExternal } from 'react-icons/bi'
 
 export default function ThisSite(props) {
 
@@ -49,6 +49,7 @@ return(
                     </div>
                 </div> 
             </div>
+            <Mobile />
             <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
         </body>
     )

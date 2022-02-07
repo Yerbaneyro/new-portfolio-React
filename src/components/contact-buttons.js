@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi';
 import { BsFileEarmarkPerson } from 'react-icons/bs'
 
+
 export default function ContactButtons() {
     return(
         <div className='social-buttons'>

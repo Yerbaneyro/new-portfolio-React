@@ -24,6 +24,7 @@ import Native from './components/portfolio/native';
 import Weather from './components/portfolio/weather';
 
 import AnimatedTypingHome from './components/typing-home'
+import Mobile from './components/mobile';
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
           </div> 
         </div>
         <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
+        <Mobile />
       </body>
     )
   }
@@ -88,6 +90,7 @@ function App() {
             <h2 className={'portfoliio-caption'}>Chose project from menu on the left.</h2>
           </div> 
         </div>
+        <Mobile />
         <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
       </body>
     )
@@ -150,6 +153,7 @@ function App() {
         
       </div> 
     </div>
+    <Mobile switchTheme={switchTheme} theme={theme}/>
     <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
     </body>
   );

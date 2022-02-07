@@ -2,6 +2,7 @@ import ContactButtons from '../contact-buttons';
 import ToggleButton from '../toggle-button';
 import Navigation from '../navigation';
 import PortfolioMenu from '../portfolio-menu';
+import Mobile from '../mobile'
 
 import { FaHtml5, FaExternalLinkAlt, FaReact, FaSass, FaLinux, FaNodeJs, FaPython, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si'
@@ -48,6 +49,7 @@ return(
             </div>
         </div> 
     </div>
+    <Mobile />
     <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
 </body>
     )

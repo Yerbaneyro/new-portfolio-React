@@ -679,43 +679,39 @@ code {
     }
 }
 
-@media only screen and (max-width: 428px) {
-    body {
-        height: 110vh;
-    }
-    
-    .laptop {
+@media only screen and (min-width: 914px) {
+    .mobile-container {
         display: none;
     }
+}
 
-    .icon-container {
-        position: relative;
-        bottom: -180px;
+@media only screen and (max-width: 914px) {
+    .container{
+        display: none;
+    }
+    body{
+        height: 100vh;
+        background-color:#18161d;
+    }
+    .mobile-container {
+        display: block;
+        color: var(--grayish);
         text-align: center;
-        width: 100%;
-        background-color: rgba(39, 38, 107, 0.288);
-        height: 149px;
-        width: 400px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    
-        * {
-            width: 25px;
-            height: 25px;
-            padding: 15px;
+        height: 100vh;
+        
+        h3 {
+            margin-top: 40px;
         }
     }
 
     .social-buttons {
-        top:0px;
-        position: fixed;
+        top:10px;
         display: flex;
         justify-content: center;
     
         div {
             display: flex;
-            margin: 30px 50px;
+            margin: 30px 10px;
     
             * {
                 width: 30px;
@@ -725,486 +721,35 @@ code {
             }
     
             a:hover {   
-                transform: scale(1.2);
+                transform: scale(1.0);
             }
     
     
             
         }
     }
-
-    .portfolio-menu {
-        position: fixed;
-        display: flex;
-        flex-wrap: wrap;
-        top: -410px;
-        margin-top: 10px;
-        font-size: 10px;
-        margin-left: 0px;
-        font-weight: bolder;
-        width: 500px;
-        z-index: 1;
-        
-    
-        li {
-            background-color: #53535334;
-            border-radius: 24px;
-            border: 2px solid;
-            align-items: center;
-            margin: 5px 5px;
-            height: 30px;
-            width: 130px;
-            display: flex inline;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            left: 590px;
-            top: 500px;
-            padding: 5px;
-            transition: 0.2s ease-in-out 0s;
-            cursor: pointer;
-            
-        }
-    
-        li:hover {
-            background-color: var(--grayish);
-            color: var(--background);
-            border: 2px solid var(--background);
-            position:relative;
-            left: 590px;
-        }
+    .contact-button {
+        background-color: var(--grayish);
+        width: 200px;
+        height: 50px;
+        margin-top: 40px;
+        border-radius: 24px;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .icon-code {
+        width: 150px;
+        height: 150px;
     }
     .footer {
         display: none;
-    }
-
-    .this-center {
-        border-radius: 1px;
-        width: 300px;
-        height: 320px;
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        left: 50%;
-        top: 220px;
-        transform: translateX(-50%);
+        font-size: 14px;
+        width: 100%;
         text-align: center;
     }
-    
-    .this-site-title {
-        font-size: 30px;
-        position: relative;
-        top: 80px;
-        left: -120px;
-    }
-    
-    .this-page-link {
-        position: absolute;
-        top: 400px;
-        left: 175px;
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(21, 133, 67);    
-    }
-    
-    .technologies {
-        display: flex;
-        justify-content: left;
-        border-radius: 24px;
-        width: 300px;
-        position: absolute;
-        top: 430px;
-        right: 200px;
-        
-        p {
-            margin-left: 20px;
-            font-size: 20px;
-        }
-    }
-    
-    .technology-icons {
-    
-        display: flex;
-    
-        * {
-            width: 30px;
-            height: 30px;
-            margin: 18px 10px;
-        }
-    
-    }
-    
-    .links {
-        position: absolute;
-        top: 430px;
-        right: 80px;
-        display: flex;
-        justify-content: right;
-        border-radius: 24px;
-        width: 550px;
-        
-        p {
-            font-size: 20px;
-        }
-    }
-    
-    #live {
-        display: none;
-    }
-    
-    .live-link-container {
-        display: none;
-    }
-    
-    #live-link {
-        display: none;
-        position: relative;
-        bottom: 35px;
-        right: 10px;
-    }
-    
-    .links-icons {
-    
-        display: flex;
-    
-        * {
-            width: 40px;
-            height: 40px;
-            margin: 12px 10px;
-            position: relative;
-            bottom: 5px;
-        }
-    
-    }
-    
-    .screenshot {
-        border-radius: 5px;
-        width: 300px;
-        height: 180px;
-        position: relative;
-        right: 0px;
-        left: 130px;
-        top: 190px;
-        box-shadow: 0 0 10px var(--grayish);
-        border: 2px solid var(--grayish);
-    }
-    
-    .description {
-        text-align:justify;
-        border-radius: 13   px;
-        width: 300px;
-        height: 400px;
-        position: absolute;
-        left: 120px;
-        top: 490px;
-        background-color: #18161d0c;
-        color: var(--grayish);
-        font-weight: bold;
-        padding: 13px;
-    }
-
-    .portfolio-title {
-        top: 30px;
-    }
-
-    .portfoliio-caption {
-        display: none;
-    }
-
-    .nav-bar {
-        position: fixed;
-        bottom: 765px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        z-index: 1;
-        
-        div {
-            margin: 5px 5px;
-            border: 2px solid;
-            border-radius: 25px;
-            width: 140px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            transition: 0.2s ease-in-out 0s;
-            cursor: pointer;
-        }
-    
-        div:hover {
-            background-color: var(--grayish);
-            color: var(--background);
-            border: 2px solid var(--grayish);
-        }
-        
-    }
-
-    .vegan-title {
-        font-size: 30px;
-        position: absolute;
-        top: 100px;
-        left: 170px;
-    }
-    .weather-title {
-        font-size: 26px;
-        position: absolute;
-        top: 110px;
-        left: 170px;
-    }
-    .mad-mai-title {
-        font-size: 26px;
-        position: absolute;
-        top: 110px;
-        left: 150px;
-    }
-    .mad-mai-link {
-        position: absolute;
-        top: 400px;
-        left: 220px;
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(21, 133, 67);    
-    }
-    .mad-mai-res {
-        display: none;
-    }
-    .app-thumbal {
-        border-radius: 5px;
-    width: 215px;
-    position: absolute;
-    right: 280px;
-    bottom: -130px;
-    
-    }
-
-    .chat-title {
-        font-size: 26px;
-        position: absolute;
-        left: 290px;
-        top: 180px;
-    }
-
-    .list-native {
+    .mobile-console {
+        margin-top: 30px;
         text-align: left;
-        position: relative;
-        left: 267px;
-        top: 240px;
-        font-size: 15px;
-    }
-    .json-thumbal {
-        width: 200px;
-        position: fixed;
-        top: 200px;
-        right: 170px;
-        box-shadow: 0 0 10px var(--grayish);
-        border: 2px solid var(--grayish);
-    }
-    
-    .json-title {
-        position: relative;
-        right: -180px;
-        top: 120px;
-    }
-    
-    .json-description {
-        text-align:justify;
-        border-radius: 13   px;
-        width: 280px;
-        height: 400px;
-        position: absolute;
-        left: 120px;
-        top: 465px;
-        background-color: #18161d0c;
-        color: var(--grayish);
-        font-weight: bold;
-        padding: 13px;
-    }
-    .about-me-text {
-        text-align: left;
-        font-size: 13px;
-        width: 240px;
-        position: relative;
-        left: 0;
-        top: 200px;
-        background-color: #18161d0c;
-        border-radius: 24px;
-        padding: 15px;
-    }
-    
-    .about-me-tools {
-        text-align: left;
-        font-size: 14px;
-        width: 270px;
-        max-height: 400px;
-        position: relative;
-        left: 0;
-        top: 200px;
-        border-radius: 24px;
-        padding: 15px;
-    }
-
-    .about-center-screen {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        right: 0px;
-    }
-
-    .about-icon {
-        display: none;    
-    }
-
-    .skils-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    
-        * {
-            width: 40px;
-            height: 40px;
-            margin: 10px;
-        }
-    }
-    .portfolio-title {
-        top: 250px;
+        margin-left: 30px;
     }
 } 
-
-@media only screen and (max-width: 375px) {
-    body {
-        height: 150vh;
-    }
-    .nav-bar {
-        position: fixed;
-        bottom: 465px;
-        right: 0px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        z-index: 1;
-        
-        div {
-            margin: 5px 5px;
-            border: 2px solid;
-            border-radius: 25px;
-            width: 140px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            transition: 0.2s ease-in-out 0s;
-            cursor: pointer;
-        }
-    
-        div:hover {
-            background-color: var(--grayish);
-            color: var(--background);
-            border: 2px solid var(--grayish);
-        }
-        
-    }
-    .icon-container {
-        position: relative;
-        bottom: -490px;
-        text-align: center;
-        width: 100%;
-        background-color: rgba(39, 38, 107, 0.288);
-        height: 80px;
-        width: 300px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    
-        * {
-            width: 25px;
-            height: 25px;
-            padding: 5px;
-        }
-    }
-    .portfolio-menu {
-        position: fixed;
-        display: flex;
-        flex-wrap: wrap;
-        top: -340px;
-        margin-top: 10px;
-        font-size: 10px;
-        margin-left: 0px;
-        font-weight: bolder;
-        width: 500px;
-        z-index: 1;
-        
-    
-        li {
-            background-color: #53535334;
-            border-radius: 24px;
-            border: 2px solid;
-            align-items: center;
-            margin: 5px 5px;
-            height: 10px;
-            width: 130px;
-            display: flex inline;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            left: 590px;
-            top: 500px;
-            padding: 5px;
-            transition: 0.2s ease-in-out 0s;
-            cursor: pointer;
-            
-        }
-    
-        li:hover {
-            background-color: var(--grayish);
-            color: var(--background);
-            border: 2px solid var(--background);
-            position:relative;
-            left: 590px;
-        }
-    }
-    .about-me-text {
-        text-align: left;
-        font-size: 10px;
-        width: 240px;
-        position: relative;
-        left: 0;
-        top: 300px;
-        background-color: #18161d0c;
-        border-radius: 24px;
-        padding: 15px;
-    }
-    
-    .about-me-tools {
-        text-align: left;
-        font-size: 14px;
-        width: 270px;
-        max-height: 400px;
-        position: relative;
-        left: 0;
-        top: 300px;
-        border-radius: 24px;
-        padding: 15px;
-    }
-
-    .about-center-screen {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        right: 0px;
-    }
-
-    .about-icon {
-        display: none;    
-    }
-    .skils-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    
-        * {
-            width: 30px;
-            height: 30px;
-            margin: 5px;
-        }
-    }
-}
