@@ -65,6 +65,7 @@ function App() {
             </animated.div>  
           </div> 
         </div>
+        <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
       </body>
     )
   }
@@ -84,9 +85,10 @@ function App() {
           </div>
           <div className='center'>
             <h1 className={'portfolio-title'}>Portfolio</h1>
-            <h2>Chose project from menu on the left.</h2>
+            <h2 className={'portfoliio-caption'}>Chose project from menu on the left.</h2>
           </div> 
         </div>
+        <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
       </body>
     )
   }
@@ -138,7 +140,7 @@ function App() {
       <ContactButtons />
       <a onClick={switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={theme}/></a>
       <Navigation setcurrentScreen={setcurrentScreen}/> 
-      <div className='center-screen'>
+      <div className='about-center-screen'>
         <AboutSkills />
         <FaUserAlt className='about-icon'/>
         <img src={laptop} alt='laptop' className='laptop'/>
@@ -147,10 +149,8 @@ function App() {
       <div className='center'>
         
       </div> 
-      
-      
-      
     </div>
+    <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
     </body>
   );
 }

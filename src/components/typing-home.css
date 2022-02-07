@@ -7,7 +7,7 @@
 
 .loading {
     position: absolute;
-    left: 35px;
+    left: 40px;
     top: 10px;
 }
 
@@ -35,4 +35,48 @@
 .console {
     color: green;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 428px) {
+    .hello {
+        font-weight: bold;
+        font-size: 30px;
+        width: fit-content;
+        padding: 3px 3px;
+        margin-left: 120px;
+    }
+
+    .typing-home {
+        text-align: left;
+        font-size: 20px;
+        position: relative;
+        bottom: -130px;
+    }  
+}
+@media only screen and (max-width: 375px) {
+    .typing-home {
+        text-align: left;
+        font-size: 20px;
+        position: fixed;
+        bottom: 70px;
+    }  
+    .hello {
+        font-weight: bold;
+        font-size: 30px;
+        width: fit-content;
+        padding: 3px 3px;
+        margin-left: 100px;
+    }
+    .name {
+        text-align: center;
+        font-size: 60px;
+        position: relative;
+        bottom: 30px;
+    }
+    
+    .web-dev {
+        text-align: center;
+        position: relative;
+        bottom: 60px;
+    }
 }

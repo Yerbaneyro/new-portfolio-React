@@ -27,8 +27,8 @@ return(
                 <div className='this-center'>
                     <img src={PortfolioThumbal} alt='portfolio-screenshot'  className='screenshot' />
                     <h2 className={'this-site-title'}>My Portfolio</h2>
-                    <a className={'this-page-link'}>www.mbednarz.website</a>
-                    <p className='description'>My Portfolio website...you are currently here. Proudly designed and created by myself with help of React library. I used React Spring to create animations. Page is trying to be minimalistic in design but also comprehensive in providing content value. I hope you like it. Let me know I will really appreciate all feedback. Created in Feb 2022  &#128526; </p>
+                    <a href='https://mbednarz.website/' target='_blank' className={'this-page-link'}>www.mbednarz.website</a>
+                    <p className='description'>My Portfolio website...you are currently here. Proudly designed and created by myself with help of React library. I used React Spring to create animations. Page is trying to be minimalistic in design but also comprehensive in providing content value. I hope you like it. Let me know I will really appreciate all feedback. Created in Feb 2022 </p>
                     <div className='technologies'>
                         <p>Technology:</p>
                         <div className='technology-icons'>
@@ -40,7 +40,7 @@ return(
                     <div className='links'>
                         <p>See on:</p>
                         <div className='links-icons'>
-                            <FaGithub />
+                            <a href='https://github.com/Yerbaneyro/new-portfolio-React' target='_blank'><FaGithub /></a>
                             <div className='live-link-container'>
                                 <p id='live'>Live</p>
                                 <p id='live-link'>Site</p>
@@ -49,6 +49,7 @@ return(
                     </div>
                 </div> 
             </div>
+            <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
         </body>
     )
 }

@@ -24,7 +24,7 @@ return(
         <div className='this-center'>
             <img src={veganThumbal} alt='portfolio-screenshot'  className='screenshot' />
             <h2 className={'vegan-title'}>Vegan Calculator</h2>
-            <a className={'this-page-link'}>Click here to see DEMO</a>
+            <a href='https://mbednarz.website/Vegan%20Calculator/index.html' target='_blank' className={'this-page-link'}>Click here to see DEMO</a>
             <p className='description'>Pure, simple JavaScript with some styling. One of the first web applications that I have done with this technology. The calculator is showing how big a change in environment could have been done if one person decide to change their animal-based diet for plant-based one. Created in early 2021.  </p>
             <div className='technologies'>
                 <p>Technology:</p>
@@ -37,11 +37,12 @@ return(
             <div className='links'>
                 <p>See on:</p>
                 <div className='links-icons'>
-                    <FaGithub />
+                    <a href='https://github.com/Yerbaneyro/Vegan-Calculator' target='_blank'><FaGithub /></a>
                 </div>
             </div>
         </div> 
     </div>
+    <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
 </body>
     )
 }
