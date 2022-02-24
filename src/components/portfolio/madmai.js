@@ -23,7 +23,7 @@ export default function MadMai(props) {
                 <PortfolioMenu setcurrentScreen={props.setcurrentScreen} currentScreen={props.currentScreen} />
                 <div className='opacity'>
                     <a href='https://github.com/Yerbaneyro/MadMai-Business-site' target='_blank'><button className='github-button'>GitHub <FaGithub className='button-icon'/></button></a>
-                    <a href='http://madmai.pl/' target='_blank'><button className='demo-button'>You are here!</button></a>
+                    <a href='http://madmai.pl/' target='_blank'><button className='demo-button'>DEMO</button></a>
                 </div>
                 <img src={laptop} alt='laptop' className='laptop'/>
                 <div id="project-description">

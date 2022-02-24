@@ -4,7 +4,7 @@ import Navigation from '../navigation';
 import PortfolioMenu from '../portfolio-menu';
 import Mobile from '../mobile'
 
-import { FaHtml5, FaGithub, FaReact, FaPython, FaFlask } from 'react-icons/fa'
+import { FaHtml5, FaGithub, FaReact, FaPython, FaDocker } from 'react-icons/fa'
 import { SiFlask } from 'react-icons/si'
 
 import laptop from '../../img/laptop.png'
@@ -40,6 +40,7 @@ return(
                     <SiFlask />
                     <br />
                     <FaReact />
+                    <FaDocker />
                 </div>
             </div>
         </div> 

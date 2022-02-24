@@ -663,6 +663,29 @@ code {
 
 @media only screen and (max-width: 1386px) {
 
+    #project-description {
+        font-size: 16px;
+        width: 250px;
+        position: relative;
+        left: 810px;
+        height: 360px;
+    }
+
+    .face-technology-icons {
+
+        display: block;
+        position: absolute;
+        left: 614px;
+        bottom: 105px;
+    
+        * {
+            width: 30px;
+            height: 30px;
+            margin: 5px 5px;
+        }
+    
+    }
+
     .about-me-text {
         text-align: left;
         font-size: 14px;
@@ -834,19 +857,35 @@ code {
     body{
         height: 100vh;
         background-color:#18161d;
+        color: rgb(255, 255, 255);
+    }
+
+    .my-name-mobile {
+        color: rgb(23, 238, 41);
     }
     .mobile-container {
         display: block;
-        color: var(--grayish);
+        color: white;
         text-align: center;
         height: 100vh;
-        
+    
+
         h3 {
             margin-top: 40px;
+        }
+
+        p {
+            width: 300px;
+            text-align: justify;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 14px;
         }
     }
 
     .social-buttons {
+
         top:10px;
         display: flex;
         justify-content: center;
@@ -856,29 +895,48 @@ code {
             margin: 30px 10px;
     
             * {
+                color: white;
                 width: 30px;
                 height: 30px;
                 margin: 0 10px;
                 transition: 0.1s ease-in-out 0s;
             }
     
-            a:hover {   
-                transform: scale(1.0);
-            }
     
     
             
         }
     }
     .contact-button {
-        background-color: var(--grayish);
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(23, 238, 41);
+        border: 2px solid rgb(23, 238, 41);
         width: 200px;
-        height: 50px;
+        height: 4   0px;
         margin-top: 40px;
         border-radius: 24px;
         font-size: 24px;
         margin-bottom: 30px;
+        font-family: Roboto;
+        cursor: pointer;
     }
+
+    .mobile-bottom {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .mobile-skils-container {
+
+        * {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+        }
+    }
+
     .icon-code {
         width: 150px;
         height: 150px;
@@ -893,6 +951,67 @@ code {
         margin-top: 30px;
         text-align: left;
         margin-left: 30px;
+    }
+
+    nav {
+
+        button {
+            width: 100px;
+            margin: 5px;
+            border-radius: 12px;
+            background-color: #d2cce000;
+            color: white;
+            border: 1px solid white;
+            font-family: Roboto;
+            cursor: pointer;
+        }
+    }
+    
+    .dev {
+        color: aqua;
+    }
+    .portfolio-item {
+        background-color: rgba(124, 121, 121, 0.082);
+        padding-top: 2px;
+        padding-bottom: 20px;
+        margin-top: 40px;
+    }
+    .mobile-thumbal {
+        width: 300px;
+    }
+
+    .mobile-demo-button {
+        width: 100px;
+        height: 20px;
+        color: white;
+        background-color: #44404000;
+        border: 1px solid white;
+        border-radius: 12px;
+    }
+    .mobile-github-button {
+        margin-right: 30px;
+        width: 100px;
+        height: 20px;
+        color: white;
+        background-color: #44404000;
+        border: 1px solid white;
+        border-radius: 12px;
+
+    }
+
+    .mobile-native-thumbal {
+        width: 150px;
+    }
+
+    .mobile-tools {
+        * {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+        }
+    }
+    .my-avatar {
+        width: 300px;
     }
 } 
 
