@@ -41,9 +41,10 @@ return(
                 </div>
             </div>
         </div> 
+        <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
     </div>
     <Mobile />
-    <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
+    
 </body>
     )
 }

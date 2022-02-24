@@ -25,9 +25,12 @@ a {
     text-decoration: none;
 }
 
+html {
+    min-height: 100%;
+}
+
 body {
     margin: 0;
-    height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -39,6 +42,9 @@ body {
     a {
         color: var(--grayish);
     }
+
+    min-height: 100vh;
+    
 }
 
 code {
@@ -52,6 +58,8 @@ code {
     font-family: Roboto;
     display: block;
     text-align: center;
+    scale: 0.9;
+    height: 650px;
     
 }
 
@@ -61,7 +69,8 @@ code {
     margin-top: 80px;
     width: fit-content;
     padding: 20px 20px;
-    text-align: center;    
+    text-align: center;  
+    min-height: 380px;  
 }
 
 
@@ -352,6 +361,21 @@ code {
 
 }
 
+.face-technology-icons {
+
+    display: block;
+    position: absolute;
+    left: 650px;
+    bottom: 120px;
+
+    * {
+        width: 40px;
+        height: 40px;
+        margin: 5px 10px;
+    }
+
+}
+
 .links {
     position: absolute;
     top: 285px;
@@ -400,13 +424,105 @@ code {
 
 }
 
+#project-description {
+        text-align: justify;
+        font-size: 18px;
+        width: 300px;
+        height: 400px;
+        position: relative;
+        left: 910px;
+        bottom: 10px;
+        background-color: #18161d0c;
+        border-radius: 24px;
+        padding: 15px;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+.github-button {
+    width: 150px;
+    height: 35px;
+    margin: 20px;
+    font-size: 20px;
+    margin-top: 160px;
+    border-radius: 24px;
+    background-color: #ffffff00;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.1s ease-in-out 0s;
+    padding-bottom: 2px;
+}
+
+.github-button:hover {
+    transform: scale(1.1);
+    color: rgb(34, 185, 20);
+    border: 2px solid rgb(34, 185, 20);
+}
+
+.demo-button {
+    width: 150px;
+    height: 35px;
+    margin: 20px;
+    font-size: 20px;
+    margin-top: 150px;
+    border-radius: 24px;
+    background-color: #ffffff00;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out 0s;
+}
+
+.demo-button:hover {
+    transform: scale(1.1);
+    color: rgb(34, 185, 20);
+    border: 2px solid rgb(34, 185, 20);
+}
+
+
+
+.button-icon {
+    position: relative;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+}
+
 .screenshot {
     border-radius: 5px;
-    width: 280px;
+    width: 595px;
+    height: 373px;
     position: absolute;
-    right: 260px;
-    box-shadow: 0 0 10px var(--grayish);
-    border: 2px solid var(--grayish);
+    right: -30px;
+    bottom: -33px;
+    padding: 3px 2px;
+}
+
+.opacity {
+    border-radius: 5px;
+    width: 595px;
+    height: 373px;
+    position: relative;
+    left: 766px;
+    bottom: -4px;
+    padding: 3px 2px;
+    background-color: #18161d;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s ease-in-out 0s;
+}
+
+.opacity:hover {
+    opacity: 0.9;
+}
+
+.opacity:hover + .screenshot {
+    filter: blur(20px);
 }
 
 .description {
@@ -472,8 +588,16 @@ code {
 .weather-title {
     font-size: 26px;
     position: absolute;
-    top: 140px;
-    left: 30px;
+    top: 190px;
+    left: 5px;
+}
+
+.face-page-link {
+    position: relative;
+    left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(21, 133, 67);    
 }
 
 .json-thumbal {
@@ -505,7 +629,7 @@ code {
 
 .footer {
     position: fixed; 
-    bottom: 10px; 
+    bottom: -100px; 
     left: 50%; 
     transform: translateX(-50%);
     color: var(--grayish);
@@ -518,6 +642,24 @@ code {
     right: 600px;
 }
 
+.fixing-container {
+    display: block;
+}
+
+.geo-title {
+    position: relative;
+    top: 150px;
+    right: 120px;
+}
+
+.geo-page-link {
+    position: absolute;
+    top: 224px;
+    left: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(21, 133, 67);  
+}
 
 @media only screen and (max-width: 1386px) {
 
@@ -753,3 +895,11 @@ code {
         margin-left: 30px;
     }
 } 
+
+@media only screen and (max-height: 600px) {
+    .container {
+        scale: 0.8;
+        position: relative;
+        bottom: 40px;
+    }
+}

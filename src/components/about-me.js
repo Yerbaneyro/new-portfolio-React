@@ -1,6 +1,6 @@
 import { useSpring, animated } from "react-spring"
 import { FaDocker, FaHtml5, FaCss3, FaReact, FaSass, FaLinux, FaNodeJs, FaPython, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si'
+import { SiJavascript, SiTypescript, SiGit, SiFlask } from 'react-icons/si'
 
 function AboutMe() {
 
@@ -51,6 +51,7 @@ function AboutSkills() {
                 <FaReact />
                 <FaNodeJs />
                 <FaPython />
+                <SiFlask />
                 <FaDocker />
                 <SiGit />
                 <FaLinux />
@@ -64,7 +65,7 @@ function AboutSkills() {
                 </ul>
                 <ul >
                     <li>Express</li>
-                    <li>SQL</li>
+                    <li>SQLite</li>
                     <li>Gimp/PS</li>
                 </ul>
             </div>

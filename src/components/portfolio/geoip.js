@@ -4,15 +4,13 @@ import Navigation from '../navigation';
 import PortfolioMenu from '../portfolio-menu';
 import Mobile from '../mobile'
 
+import { FaReact, FaGithub } from 'react-icons/fa'
+import { SiTypescript } from 'react-icons/si'
+
 import laptop from '../../img/laptop.png';
-import PortfolioThumbal from '../../img/portfolio-thumbal.png';
+import GeoThumbal from '../../img/GeoIp.png'
 
-import './this-site.css';
-
-import {  FaReact, FaSass, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si'
-
-export default function ThisSite(props) {
+export default function GeoIP(props) {
 
     return(
         <body data-theme={props.theme}>
@@ -23,22 +21,22 @@ export default function ThisSite(props) {
             <div className='center-screen'>
                 <PortfolioMenu setcurrentScreen={props.setcurrentScreen} currentScreen={props.currentScreen} />
                 <div className='opacity'>
-                    <a href='https://github.com/Yerbaneyro/new-portfolio-React' target='_blank'><button className='github-button'>GitHub <FaGithub className='button-icon'/></button></a>
-                    <a href='https://mbednarz.website/' target='_blank'><button className='demo-button'>You are here!</button></a>
+                    <a href='https://github.com/Yerbaneyro/3D-GeoIP' target='_blank'><button className='github-button'>GitHub <FaGithub className='button-icon'/></button></a>
+                    <a href='https://loving-wing-e7f08c.netlify.app/' target='_blank'><button className='demo-button'>DEMO</button></a>
                 </div>
                 <img src={laptop} alt='laptop' className='laptop'/>
                 <div id="project-description">
-                    <h2>My Portfolio</h2>
-                    <p> My Portfolio website...you are currently here. Proudly designed and created by myself with help of React library. I used React Spring to create animations. Page is trying to be minimalistic in design but also comprehensive in providing content value. I hope you like it. Let me know I will really appreciate all feedback. Created in Feb 2022  </p>
+                    <h2>GeoIP 3D</h2>
+                    <p> With this App, you can check your public IP address and see its localization on the 3D Globe. Another feature of the GeoIP app is checking someone else public IP and its geolocalisation data. I used TypeScript and React to create this app and fetched API from https://freegeoip.app/. I also decided to implement localization visualization with globe.gl library for React.js  </p>
+                    <a href='https://loving-wing-e7f08c.netlify.app/' target='_blank' className={'face-page-link'}>Click here to see DEMO</a>
                 </div>
             </div>
             <div className='this-center'>
-                <img src={PortfolioThumbal} alt='portfolio-screenshot'  className='screenshot' />
+                <img src={GeoThumbal} alt='portfolio-screenshot'  className='screenshot' />
                 <div className='technologies'>
                     <div className='face-technology-icons'>
                         <FaReact />
-                        <FaSass />
-                        <SiJavascript />
+                        <SiTypescript />
                     </div>
                 </div>
             </div> 
@@ -49,4 +47,5 @@ export default function ThisSite(props) {
         
     </body>
     )
+
 }

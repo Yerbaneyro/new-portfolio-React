@@ -16,12 +16,13 @@ import ContactButtons from './components/contact-buttons';
 import IconsSlider from './components/icon-slider';
 import PortfolioMenu from './components/portfolio-menu';
 import { AboutMe, AboutSkills } from './components/about-me';
-import Vegan from './components/portfolio/vegan';
+
+import GeoIp from './components/portfolio/geoip';
 import ThisSite from './components/portfolio/this-site';
 import Json from './components/portfolio/json';
+import Face from './components/portfolio/face';
 import MadMai from './components/portfolio/madmai';
 import Native from './components/portfolio/native';
-import Weather from './components/portfolio/weather';
 
 import AnimatedTypingHome from './components/typing-home'
 import Mobile from './components/mobile';
@@ -54,19 +55,24 @@ function App() {
 
     return(
       <body data-theme={theme}>
+        <div className='border'>
         <div className="container" data-theme={theme}>
           <ContactButtons />
           <a onClick={switchTheme} className='dark-mode-switcher'><ToggleButton currentTheme={theme}/></a>
           <Navigation setcurrentScreen={setcurrentScreen}/> 
-          <img src={laptop} alt='laptop' className='laptop'/>
+          <div className='fixing-container'>
+            <img src={laptop} alt='laptop' className='laptop'/>
+            
+          </div>
           <div className='center'>
             <AnimatedTypingHome />
             <animated.div style={myName}>
               <IconsSlider />
             </animated.div>  
           </div> 
+          <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
         </div>
-        <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
+        </div>        
         <Mobile />
       </body>
     )
@@ -89,9 +95,10 @@ function App() {
             <h1 className={'portfolio-title'}>Portfolio</h1>
             <h2 className={'portfoliio-caption'}>Chose project from menu on the left.</h2>
           </div> 
+          <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
         </div>
         <Mobile />
-        <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
+        
       </body>
     )
   }
@@ -102,6 +109,12 @@ function App() {
       <ThisSite theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen} currentScreen={currentScreen}/>
     )
   }
+  if (currentScreen == 'Face') {
+
+    return(
+      <Face theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
+    )
+  }
   if (currentScreen == 'JSON') {
 
     return(
@@ -109,10 +122,10 @@ function App() {
     )
   }
 
-  if (currentScreen == 'Vegan') {
+  if (currentScreen == 'GeoIp') {
 
     return(
-      <Vegan theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
+      <GeoIp theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
     )
   }
 
@@ -130,13 +143,6 @@ function App() {
     )
   }
 
-  if (currentScreen == 'Weather') {
-
-    return(
-      <Weather theme={theme} switchTheme={switchTheme} setcurrentScreen={setcurrentScreen}/>
-    )
-  }
-
   return (
     <body data-theme={theme}>
     <div className="container" data-theme={theme}>
@@ -149,12 +155,10 @@ function App() {
         <img src={laptop} alt='laptop' className='laptop'/>
         <AboutMe />
       </div>
-      <div className='center'>
-        
-      </div> 
+      <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
     </div>
     <Mobile switchTheme={switchTheme} theme={theme}/>
-    <p className='footer'> &#169; 2022 Marcin Bednarz - Created using React js</p>
+    
     </body>
   );
 }
