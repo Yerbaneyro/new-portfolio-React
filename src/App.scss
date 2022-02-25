@@ -1,14 +1,14 @@
- :root {
+:root {
     --grayish: #444040;
     --background: rgb(255, 255, 255);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
     --grayish: rgb(255, 255, 255);
     --background: #18161d;
 }
 
-.wrg-toggle--checked .wrg-toggle-check{
+.wrg-toggle--checked .wrg-toggle-check {
     opacity: 1;
 }
 .wrg-toggle--checked .wrg-toggle-uncheck {
@@ -17,8 +17,8 @@
 .wrg-toggle--checked .wrg-toggle-circle {
     left: 27px;
 }
-.wrg-toggle--checked .wrg-toggle-container{
-    background-color: var(--grayish)
+.wrg-toggle--checked .wrg-toggle-container {
+    background-color: var(--grayish);
 }
 
 a {
@@ -31,9 +31,9 @@ html {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -44,12 +44,11 @@ body {
     }
 
     min-height: 100vh;
-    
 }
 
 code {
-    font-family:  source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
 .container {
@@ -60,19 +59,17 @@ code {
     text-align: center;
     scale: 0.9;
     height: 650px;
-    
 }
 
 .center {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     margin-top: 80px;
     width: fit-content;
     padding: 20px 20px;
-    text-align: center;  
-    min-height: 380px;  
+    text-align: center;
+    min-height: 380px;
 }
-
 
 .nav-bar {
     position: relative;
@@ -80,7 +77,7 @@ code {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
+
     div {
         margin: 20px 20px;
         border: 2px solid;
@@ -98,14 +95,13 @@ code {
         color: var(--background);
         border: 2px solid var(--grayish);
     }
-    
 }
 
 .home {
     font-size: 20px;
     font-weight: bold;
     position: relative;
-    bottom: 17px; 
+    bottom: 17px;
 }
 
 .portfolio {
@@ -150,7 +146,7 @@ code {
 }
 
 .social-buttons {
-    top:10px;
+    top: 10px;
     display: flex;
     justify-content: center;
 
@@ -165,12 +161,9 @@ code {
             transition: 0.1s ease-in-out 0s;
         }
 
-        a:hover {   
+        a:hover {
             transform: scale(1.2);
         }
-
-
-        
     }
 }
 
@@ -190,7 +183,6 @@ code {
     left: 50%;
     top: 170px;
     transform: translateX(-50%);
-    
 }
 
 .portfolio-menu {
@@ -200,7 +192,6 @@ code {
     font-size: 14px;
     margin-left: 100px;
     font-weight: bolder;
-    
 
     li {
         background-color: #53535334;
@@ -216,7 +207,6 @@ code {
         left: 0;
         transition: 0.2s ease-in-out 0s;
         cursor: pointer;
-        
     }
 
     li:hover {
@@ -235,8 +225,6 @@ code {
     right: 600px;
 }
 
-
-
 .portfolio-title {
     font-size: 60px;
     position: relative;
@@ -250,7 +238,6 @@ code {
     left: 50%;
     top: 300px;
     transform: translateX(-50%);
-
 }
 
 .about-me-text {
@@ -331,7 +318,7 @@ code {
     left: 35px;
     font-size: 20px;
     font-weight: bold;
-    color: rgb(21, 133, 67);    
+    color: rgb(21, 133, 67);
 }
 
 .technologies {
@@ -342,7 +329,7 @@ code {
     position: absolute;
     top: 285px;
     right: 230px;
-    
+
     p {
         margin-left: 20px;
         font-size: 20px;
@@ -350,7 +337,6 @@ code {
 }
 
 .technology-icons {
-
     display: flex;
 
     * {
@@ -358,11 +344,9 @@ code {
         height: 30px;
         margin: 18px 10px;
     }
-
 }
 
 .face-technology-icons {
-
     display: block;
     position: absolute;
     left: 650px;
@@ -373,7 +357,6 @@ code {
         height: 40px;
         margin: 5px 10px;
     }
-
 }
 
 .links {
@@ -383,7 +366,7 @@ code {
     justify-content: right;
     border-radius: 24px;
     width: 550px;
-    
+
     p {
         font-size: 20px;
     }
@@ -411,7 +394,6 @@ code {
 }
 
 .links-icons {
-
     display: flex;
 
     * {
@@ -421,25 +403,24 @@ code {
         position: relative;
         bottom: 5px;
     }
-
 }
 
 #project-description {
-        text-align: justify;
-        font-size: 18px;
-        width: 300px;
-        height: 400px;
-        position: relative;
-        left: 910px;
-        bottom: 10px;
-        background-color: #18161d0c;
-        border-radius: 24px;
-        padding: 15px;
+    text-align: justify;
+    font-size: 18px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    left: 910px;
+    bottom: 10px;
+    background-color: #18161d0c;
+    border-radius: 24px;
+    padding: 15px;
 
-        h2 {
-            text-align: center;
-        }
+    h2 {
+        text-align: center;
     }
+}
 
 .github-button {
     width: 150px;
@@ -484,8 +465,6 @@ code {
     border: 2px solid rgb(34, 185, 20);
 }
 
-
-
 .button-icon {
     position: relative;
     top: 2px;
@@ -526,8 +505,8 @@ code {
 }
 
 .description {
-    text-align:justify;
-    border-radius: 13   px;
+    text-align: justify;
+    border-radius: 13 px;
     width: 220px;
     height: 400px;
     position: absolute;
@@ -558,16 +537,15 @@ code {
     left: 65px;
     font-size: 20px;
     font-weight: bold;
-    color: rgb(21, 133, 67);    
+    color: rgb(21, 133, 67);
 }
 
 .app-thumbal {
-        border-radius: 5px;
+    border-radius: 5px;
     width: 215px;
     position: absolute;
     right: 380px;
     bottom: 10px;
-    
 }
 
 .chat-title {
@@ -597,7 +575,7 @@ code {
     left: 50px;
     font-size: 20px;
     font-weight: bold;
-    color: rgb(21, 133, 67);    
+    color: rgb(21, 133, 67);
 }
 
 .json-thumbal {
@@ -614,8 +592,8 @@ code {
 }
 
 .json-description {
-    text-align:justify;
-    border-radius: 13   px;
+    text-align: justify;
+    border-radius: 13 px;
     width: 280px;
     height: 400px;
     position: absolute;
@@ -628,9 +606,9 @@ code {
 }
 
 .footer {
-    position: fixed; 
-    bottom: -100px; 
-    left: 50%; 
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
     transform: translateX(-50%);
     color: var(--grayish);
 }
@@ -658,11 +636,10 @@ code {
     left: 45px;
     font-size: 20px;
     font-weight: bold;
-    color: rgb(21, 133, 67);  
+    color: rgb(21, 133, 67);
 }
 
 @media only screen and (max-width: 1386px) {
-
     #project-description {
         font-size: 16px;
         width: 250px;
@@ -672,18 +649,16 @@ code {
     }
 
     .face-technology-icons {
-
         display: block;
         position: absolute;
         left: 614px;
         bottom: 105px;
-    
+
         * {
             width: 30px;
             height: 30px;
             margin: 5px 5px;
         }
-    
     }
 
     .about-me-text {
@@ -696,7 +671,7 @@ code {
         border-radius: 24px;
         padding: 15px;
     }
-    
+
     .about-me-tools {
         text-align: left;
         font-size: 14px;
@@ -707,7 +682,6 @@ code {
         border-radius: 24px;
         padding: 15px;
     }
-
 }
 
 @media only screen and (max-width: 1204px) {
@@ -721,7 +695,7 @@ code {
         border-radius: 24px;
         padding: 15px;
     }
-    
+
     .about-me-tools {
         text-align: left;
         font-size: 14px;
@@ -741,24 +715,23 @@ code {
     }
 
     .about-icon {
-        display: none;    
+        display: none;
     }
 
     .skils-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    
+
         * {
             width: 40px;
             height: 40px;
             margin: 10px;
         }
     }
-
-} 
+}
 @media only screen and (max-width: 1154px) {
-    @media screen and (orientation:portrait) {
+    @media screen and (orientation: portrait) {
         .portfolio-menu {
             position: fixed;
             display: flex;
@@ -769,8 +742,7 @@ code {
             margin-left: 0px;
             font-weight: bolder;
             width: 600px;
-            
-        
+
             li {
                 background-color: #53535334;
                 border-radius: 24px;
@@ -787,19 +759,18 @@ code {
                 padding: 5px;
                 transition: 0.2s ease-in-out 0s;
                 cursor: pointer;
-                
             }
-        
+
             li:hover {
                 background-color: var(--grayish);
                 color: var(--background);
                 border: 2px solid var(--background);
-                position:relative;
+                position: relative;
                 left: 530px;
             }
         }
     }
-    @media screen and (orientation:landscape) {
+    @media screen and (orientation: landscape) {
         .portfolio-menu {
             position: fixed;
             display: flex;
@@ -811,8 +782,7 @@ code {
             font-weight: bolder;
             width: 800px;
             z-index: 2;
-            
-        
+
             li {
                 background-color: #53535334;
                 border-radius: 24px;
@@ -830,14 +800,13 @@ code {
                 padding: 5px;
                 transition: 0.2s ease-in-out 0s;
                 cursor: pointer;
-                
             }
-        
+
             li:hover {
                 background-color: var(--grayish);
                 color: var(--background);
                 border: 2px solid var(--background);
-                position:relative;
+                position: relative;
                 left: 530px;
             }
         }
@@ -851,12 +820,12 @@ code {
 }
 
 @media only screen and (max-width: 914px) {
-    .container{
+    .container {
         display: none;
     }
-    body{
+    body {
         height: 100vh;
-        background-color:#18161d;
+        background-color: #18161d;
         color: rgb(255, 255, 255);
     }
 
@@ -868,7 +837,6 @@ code {
         color: white;
         text-align: center;
         height: 100vh;
-    
 
         h3 {
             margin-top: 40px;
@@ -885,15 +853,14 @@ code {
     }
 
     .social-buttons {
-
-        top:10px;
+        top: 10px;
         display: flex;
         justify-content: center;
-    
+
         div {
             display: flex;
             margin: 30px 10px;
-    
+
             * {
                 color: white;
                 width: 30px;
@@ -901,10 +868,6 @@ code {
                 margin: 0 10px;
                 transition: 0.1s ease-in-out 0s;
             }
-    
-    
-    
-            
         }
     }
     .contact-button {
@@ -912,7 +875,7 @@ code {
         color: rgb(23, 238, 41);
         border: 2px solid rgb(23, 238, 41);
         width: 200px;
-        height: 4   0px;
+        height: 4 0px;
         margin-top: 40px;
         border-radius: 24px;
         font-size: 24px;
@@ -929,7 +892,6 @@ code {
     }
 
     .mobile-skils-container {
-
         * {
             width: 20px;
             height: 20px;
@@ -954,7 +916,6 @@ code {
     }
 
     nav {
-
         button {
             width: 100px;
             margin: 5px;
@@ -966,7 +927,7 @@ code {
             cursor: pointer;
         }
     }
-    
+
     .dev {
         color: aqua;
     }
@@ -996,7 +957,6 @@ code {
         background-color: #44404000;
         border: 1px solid white;
         border-radius: 12px;
-
     }
 
     .mobile-native-thumbal {
@@ -1013,7 +973,7 @@ code {
     .my-avatar {
         width: 300px;
     }
-} 
+}
 
 @media only screen and (max-height: 600px) {
     .container {
